@@ -1,20 +1,31 @@
 {
-  "name": "metallolom",
+  "name": "tailpress",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "text_domain": "tailpress",
   "scripts": {
-    "build": "postcss ./assets/css/tailwind.css -o ./assets/css/main.css -w"
+    "development": "mix",
+    "dev": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "@tailwindcss/custom-forms": "^0.2.1",
     "@tailwindcss/jit": "^0.1.18",
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.4",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^6.0.3",
+    "laravel-mix": "^6.0.25",
+    "postcss-import": "^14.0.0",
+    "postcss-nested": "^5.0.3",
+    "postcss-nested-ancestors": "^2.0.0",
+    "resolve-url-loader": "^4.0.0"
   }
 }
