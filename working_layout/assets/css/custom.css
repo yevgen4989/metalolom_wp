@@ -1,0 +1,146 @@
+header{
+    z-index: 1;
+}
+a{
+    transition: color 700ms;
+}
+p{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.pf-font-italic{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: normal;
+    font-style: italic;
+}
+.pf-font-light{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: 300;
+    font-style: normal;
+}
+.pf-font-l-italic{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: 300;
+    font-style: italic;
+}
+.pf-font-medium{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: 500;
+    font-style: normal;
+}
+.pf-font-medium-italic{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: 500;
+    font-style: italic;
+}
+.pf-font-regular{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: normal;
+    font-style: normal;
+}
+.pf-font-thin{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: 100;
+    font-style: normal;
+}
+.pf-font-bold{
+    font-family: 'PF DinDisplay Pro';
+    font-weight: bold;
+    font-style: normal;
+}
+.start-c{
+    font-family: 'StartC';
+    font-weight: normal;
+    font-style: normal;
+}
+/*SECTIONS*/
+.overlay-section-white{
+    background-size:cover;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,.87);
+    background-position: bottom center;
+    min-height: 27rem;
+}
+.bgl-transparent{
+    background: transparent;
+}
+.partners-item{
+    box-shadow: -5px 0 0px 0px #3ec512, 0 0 10px 0 rgba(0,0,0,.3);
+    width: 120px;
+    height: 60px;
+}
+.partners-item img{
+    width: auto;
+    height: 100%;
+    max-height: 60px;
+}
+.partners-item > div{
+    background-color: #f9f9f9;
+}
+/*TEXT*/
+.dotted{
+    text-decoration: underline dashed;
+}
+.shadow-blue{
+    box-shadow: 0 10px 20px rgba(41,104,248,.25);
+}
+/* HAMBURGER MENU */
+.hamburger {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    transition: all 0.25s;
+}
+
+.hamburger__top-bun,
+.hamburger__bottom-bun {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger:hover [class*="-bun"] {
+    background: #333;
+}
+
+.hamburger__top-bun {
+    transform: translateY(-5px);
+}
+
+.hamburger__bottom-bun {
+    transform: translateY(3px);
+}
+
+.open {
+    transform: rotate(90deg);
+    transform: translateY(-1px);
+}
+
+.open .hamburger__top-bun {
+    transform:
+            rotate(45deg)
+            translateY(0px);
+}
+
+.open .hamburger__bottom-bun {
+    transform:
+            rotate(-45deg)
+            translateY(0px);
+}
+/*MODAL*/
+.modal {
+    transition: opacity 0.25s ease;
+    z-index: 999;
+}
+body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+}

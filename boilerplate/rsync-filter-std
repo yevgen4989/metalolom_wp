@@ -1,0 +1,29 @@
+# Don't copy over Git-related files.
+exclude /.git*
+# Don't copy over deployment code.
+exclude /working/
+exclude /boilerplate/
+exclude /etc/
+exclude /db/
+exclude /tmp/
+exclude /.editorconfig
+exclude /Makefile
+exclude /rsync-filter*
+exclude /docker-compose*
+exclude /nginx.conf
+exclude /autotests/
+protect /nginx-*
+exclude /.env.project
+exclude /Readme.md
+exclude /rsync.exclude
+exclude /vendor/
+# Preserve files that don't exist in the repository, but should not be
+# deleted by deployment.
+protect /vendor/***
+protect /logs/***
+protect /ssl/***
+protect /meta.yml
+protect .ftpaccess
+protect .htaccess
+protect htpasswd
+protect /.ssh

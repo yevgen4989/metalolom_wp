@@ -1,0 +1,8 @@
+# Preserve files that don't exist in the repository, but should not be
+# deleted by deployment.
+protect /www/imagetransform/***
+protect /www/cms/***
+protect /www/library/***
+protect /www/plugins/***
+include /www/themes/***
+exclude /www/**

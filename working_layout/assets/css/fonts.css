@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-Italic'),
+        url('../webfonts/PFDinDisplayPro-Italic.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-Light'),
+        url('../webfonts/PFDinDisplayPro-Light.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-LightItalic'),
+        url('../webfonts/PFDinDisplayPro-LightItalic.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-Medium'),
+        url('../webfonts/PFDinDisplayPro-Medium.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-MediumItalic'),
+        url('../webfonts/PFDinDisplayPro-MediumItalic.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-Regular'),
+        url('../webfonts/PFDinDisplayPro-Regular.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-Thin'),
+        url('../webfonts/PFDinDisplayPro-Thin.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'StartC';
+    src: local('StartC'),
+        url('../webfonts/StartC.woff') format('woff'),
+        url('../webfonts/StartC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro ExtraThin';
+    src: local('PFDinDisplayPro-ExtraThin'),
+        url('../webfonts/PFDinDisplayPro-ExtraThin.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-ExtraThin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-ThinItalic'),
+        url('../webfonts/PFDinDisplayPro-ThinItalic.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro ExtraThin';
+    src: local('PFDinDisplayPro-ExtraThinItalic'),
+        url('../webfonts/PFDinDisplayPro-ExtraThinItalic.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-ExtraThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-BlackItalic'),
+        url('../webfonts/PFDinDisplayPro-BlackItalic.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-Black'),
+        url('../webfonts/PFDinDisplayPro-Black.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-Bold'),
+        url('../webfonts/PFDinDisplayPro-Bold.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: local('PFDinDisplayPro-BoldItalic'),
+        url('../webfonts/PFDinDisplayPro-BoldItalic.woff') format('woff'),
+        url('../webfonts/PFDinDisplayPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

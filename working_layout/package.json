@@ -1,0 +1,20 @@
+{
+  "name": "metallolom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss ./assets/css/tailwind.css -o ./assets/css/main.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  }
+}

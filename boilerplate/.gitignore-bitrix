@@ -1,0 +1,6 @@
+.idea
+/www/*
+!/www/ajax/
+/www/bitrix/
+!/www/local/
+!/www/wp-content/themes/

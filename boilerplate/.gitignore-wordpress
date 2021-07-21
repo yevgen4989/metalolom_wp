@@ -7,7 +7,7 @@
 /www/*
 !/www/wp-content/
 /www/wp-content/*
+!/www/wp-content/plugins/
 !/www/wp-content/themes/
 /www/wp-content/uploads/*
 /www/wp-content/upgrade/*
-/www/wp-content/updraft/*
