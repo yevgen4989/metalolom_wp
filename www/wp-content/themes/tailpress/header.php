@@ -80,7 +80,7 @@
             <div class="w-full lg:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
                 <a href="/" class="flex lg:hidden start-c no-underline py-1 flex flex-row items-center text-lg sm:text-3xl">
                     <img src="<?=get_template_directory_uri()?>/images/icon.png" class="lazy-off" alt="Logo" width="88" height="48">
-                    <span class="hidden lg:block"><span class="text-mblue ">ЕТАЛ</span>ЛОЛОМ</span></a>
+                    <span><span class="text-mblue ">ЕТАЛ</span>ЛОЛОМ</span></a>
                 <button id="menuBtn" class="hamburger block lg:hidden focus:outline-none" type="button" onclick="navToggle();">
                     <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
                 </button>
@@ -103,17 +103,17 @@
     <div class="container py-2 sm:px-5 mx-auto">
         <!--   HEADER INFO     -->
         <div class="flex flex-row justify-center lg:justify-between flex-wrap w-full">
-            <div class="w-full md:w-2/6 mb-2 flex justify-center lg:justify-start xl:w-2/6">
+            <div class="w-full hidden md:block md:w-2/6 mb-2 flex justify-center lg:justify-start xl:w-2/6">
                 <a href="/" class="flex start-c no-underline py-1 flex flex-row items-center text-lg md:text-2xl">
                     <img src="<?=get_template_directory_uri()?>/images/icon.png" class="lazy-off" alt="Logo" width="88" height="48">
                     <span class="text-mblue ">ЕТАЛ</span>ЛОЛОМ</a>
             </div>
             <div class="w-auto md:w-2/6 mb-2 text-center flex flex-row md:items-center lg:items-start justify-center lg:text-left lg:justify-start lg:w-auto">
                 <a href="#" class="w-full text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                    <i class="fab fa-viber"></i>
+                    <i class="fab fa-viber shadow-mlgreen rounded-full"></i>
                 </a>
-                <a href="#" class="w-full text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                    <i class="fab fa-whatsapp"></i>
+                <a href="#" class="w-full text-mlgreen text-xl text-lg pf-font-medium no-underline px-2 ">
+                    <i class="fab fa-whatsapp shadow-mlgreen rounded-full"></i>
                 </a>
             </div>
             <div class="w-full md:w-2/6 mb-2 text-center flex flex-col justify-center lg:text-left lg:justify-start lg:w-auto px-2">
@@ -126,18 +126,18 @@
             </div>
             <div class="w-auto md:w-2/6 mb-2 text-center items-center flex flex-row justify-center lg:text-left lg:justify-start lg:w-auto">
                 <a href="#" class="w-full flex justify-center text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                    <div class="h-8 w-8 flex justify-center items-center rounded-full border-2 border-mlgreen">
+                    <div class="h-8 w-8 flex justify-center items-center rounded-full border-2 border-mlgreen shadow-mlgreen">
                         <i class="fab fa-instagram-square"></i>
                     </div>
                 </a>
                 <a href="#" class="w-full flex justify-center text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                    <div class="h-8 w-8 flex justify-center items-center rounded-full border-2 border-mlgreen">
+                    <div class="h-8 w-8 flex justify-center items-center rounded-full border-2 border-mlgreen shadow-mlgreen">
                         <i class="fab fa-vk"></i>
                     </div>
                 </a>
             </div>
             <div class="w-full md:w-2/6 mb-2 text-center flex flex-row justify-center lg:text-left lg:justify-start lg:w-auto">
-                <button class="modal-open bg-mblue text-white hover:bg-blue-500 shadow-blue px-5 py-2">
+                <button class="modal-open h-16 bg-mblue text-white hover:bg-blue-500 shadow-blue px-5 py-2">
                     Обратный звонок
                 </button>
             </div>

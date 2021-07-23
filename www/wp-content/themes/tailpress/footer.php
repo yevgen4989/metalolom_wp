@@ -168,10 +168,10 @@
                 <p class="w-full pf-font-light text-black text-lg">Работаем с 8:00 до 23:00</p>
                 <ul class="list-none">
                     <li class="w-auto inline-block "><a href="#" class="text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                            <i class="fab fa-viber"></i>
+                            <i class="fab fa-viber shadow-mlgreen rounded-full"></i>
                         </a></li>
                     <li class="w-auto inline-block "><a href="#" class="text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                            <i class="fab fa-whatsapp"></i>
+                            <i class="fab fa-whatsapp shadow-mlgreen rounded-full"></i>
                         </a></li>
                 </ul>
             </div>
