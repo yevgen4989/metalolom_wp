@@ -3,6 +3,7 @@
 *.sqllite
 /boilerplate/data/
 /boilerplate/logs/
+/boilerplate/redis/
 .idea
 /www/*
 !/www/wp-content/

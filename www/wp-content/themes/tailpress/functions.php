@@ -55,7 +55,7 @@ add_filter('file_is_displayable_image', 'webp_is_displayable', 10, 2);
 function tailpress_enqueue_scripts() {
 	$theme = wp_get_theme();
 
-	wp_enqueue_style( 'tailpress', tailpress_get_mix_compiled_asset_url( 'css/app.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'tailpress', tailpress_get_mix_compiled_asset_url( 'css/all.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_script( 'tailpress', tailpress_get_mix_compiled_asset_url( 'js/app.js' ), array(), $theme->get( 'Version' ) );
 }
 
