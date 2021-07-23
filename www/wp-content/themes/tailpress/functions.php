@@ -1,4 +1,8 @@
 <?php
+include('inc/include.php');
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page();
+}
 
 // Use a quality setting of 75 for WebP images.
 function filter_webp_quality( $quality, $mime_type ) {
@@ -49,17 +53,31 @@ function webp_is_displayable($result, $path) {
 }
 add_filter('file_is_displayable_image', 'webp_is_displayable', 10, 2);
 
+//function insert_jquery(){
+//    wp_enqueue_script('jquery', false, array(), false, false);
+//    wp_enqueue_script('jquery-core', false, array(), false, false);
+//}
+//add_filter('wp_enqueue_scripts','insert_jquery',1);
+
+add_filter( 'wp_enqueue_scripts', 'change_default_jquery', PHP_INT_MAX );
+
+function change_default_jquery( ){
+    if ( !is_admin() ) {
+        wp_dequeue_script( 'jquery');
+        wp_deregister_script( 'jquery');
+    }
+}
+
+
 /**
  * Enqueue scripts.
  */
 function tailpress_enqueue_scripts() {
-	$theme = wp_get_theme();
-
-	wp_enqueue_style( 'tailpress', tailpress_get_mix_compiled_asset_url( 'css/all.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tailpress', tailpress_get_mix_compiled_asset_url( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'tailpress', tailpress_get_mix_compiled_asset_url( 'css/all.css' ), array(), false );
+	wp_enqueue_script( 'jquery', tailpress_get_mix_compiled_asset_url( 'js/app.js' ), array(), false, true );
 }
 
-add_action( 'wp_enqueue_scripts', 'tailpress_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'tailpress_enqueue_scripts', PHP_INT_MAX );
 
 /**
  * Get mix compiled asset.
@@ -90,11 +108,6 @@ function tailpress_get_mix_compiled_asset_url( $path ) {
 function tailpress_setup() {
 
 	add_theme_support( 'title-tag' );
-	register_nav_menus(
-		array(
-			'primary' => __( 'Primary Menu', 'tailpress' ),
-		)
-	);
 	add_theme_support(
 		'html5',
 		array(
@@ -105,12 +118,34 @@ function tailpress_setup() {
 			'caption',
 		)
 	);
+	add_theme_support( 'menus' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'editor-styles' );
 	add_editor_style();
 }
+
+function cw_post_type() {
+
+    register_post_type( 'type_metal',
+        array(
+            'labels' => array(
+                'name' => __( 'Тип металла' ),
+                'singular_name' => __( 'Тип металла' )
+            ),
+            'has_archive' => false,
+            'public' => true,
+            'rewrite' => array('slug' => 'type-metal'),
+            'show_in_rest' => true,
+            'supports' => array('editor', 'revisions', 'title', 'custom-fields', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'page-attributes', 'post-formats')
+
+        )
+    );
+
+}
+add_action( 'init', 'cw_post_type' );
+
 
 add_action( 'after_setup_theme', 'tailpress_setup' );
 

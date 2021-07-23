@@ -1,3 +1,6 @@
+<?
+    $options = get_fields('options');
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -46,27 +49,8 @@
             <div class="text-3xl pf-font-bold text-center mb-3">
                 Наш менеджер свяжется с вами в течение 5 минут
             </div>
-            <form action="">
-                <div class="flex flex-col md:flex-row justify-between">
-                    <label class="block w-full px-2 py-2">
-                        <input class="form-input mt-1 block w-full border-2 border-black-800" type="text" placeholder="Имя" required>
-                    </label>
 
-                    <label class="block w-full px-2 py-2">
-                        <input class="form-input mt-1 block w-full border-2 border-black-800" type="text" placeholder="Телефон" required>
-                    </label>
-                </div>
-
-                <div class="flex mt-6 text-center w-full pf-font-light text-lg">
-                    <label class="flex justify-center items-center w-full">
-                        <input type="checkbox" class="form-checkbox border-2 border-black-800" required>
-                        <span class="ml-2">Я согласен(а) с обработкой персональных данных*</span>
-                    </label>
-                </div>
-                <div class="flex justify-center mt-4">
-                    <button type="submit" class="mx-auto bg-mblue text-lg pf-font-medium text-white hover:bg-blue-500 shadow-blue px-9 py-3">Отправить</button>
-                </div>
-            </form>
+            <?=do_shortcode('[fluentform id="3"]');?>
         </div>
     </div>
 
@@ -85,14 +69,14 @@
                     <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
                 </button>
             </div>
+
+            <? $menu = wp_get_nav_menu_items(3, array()); ?>
             <div id="menu" class="w-full lg:w-auto self-center lg:flex flex-col lg:flex-row items-center justify-between h-full pb-4 py-0 lg:pb-0 hidden">
-                <a class="text-dark hover:bg-mgray text-center hover:text-mlgreen pf-font-light text-lg w-full no-underline w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#">Прием металлолома</a>
-                <a class="text-dark hover:bg-mgray text-center hover:text-mlgreen pf-font-light text-lg w-full no-underline w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#">Черный металлолом</a>
-                <a class="text-dark hover:bg-mgray text-center hover:text-mlgreen pf-font-light text-lg w-full no-underline w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#">Контакты</a>
-                <a class="text-dark hover:bg-mgray text-center hover:text-mlgreen pf-font-light text-lg w-full no-underline w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#">О компании</a>
-                <a class="text-dark hover:bg-mgray text-center hover:text-mlgreen pf-font-light text-lg w-full no-underline w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#">Цены</a>
-                <a class="text-dark hover:bg-mgray text-center hover:text-mlgreen pf-font-light text-lg w-full no-underline w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#">Вопрос ответ</a>
-                <a class="text-dark hover:bg-mgray text-center hover:text-mlgreen pf-font-light text-lg w-full no-underline w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#">Условия сдачи</a>
+                <? foreach ($menu as $item) {?>
+                    <a class="text-dark hover:bg-mgray text-center hover:text-mlgreen pf-font-light text-lg w-full no-underline w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="<?=$item->url?>">
+                        <?=$item->title;?>
+                    </a>
+                <?}?>
             </div>
         </nav>
     </div>
@@ -109,32 +93,28 @@
                     <span class="text-mblue ">ЕТАЛ</span>ЛОЛОМ</a>
             </div>
             <div class="w-auto md:w-2/6 mb-2 text-center flex flex-row md:items-center lg:items-start justify-center lg:text-left lg:justify-start lg:w-auto">
-                <a href="#" class="w-full text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                    <i class="fab fa-viber shadow-mlgreen rounded-full"></i>
-                </a>
-                <a href="#" class="w-full text-mlgreen text-xl text-lg pf-font-medium no-underline px-2 ">
-                    <i class="fab fa-whatsapp shadow-mlgreen rounded-full"></i>
-                </a>
+                <?foreach ($options['messengers'] as $messenger){?>
+                    <a href="<?=$messenger['link']?>" class="w-full text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
+                        <i class="<?=$messenger['icon']?> shadow-mlgreen rounded-full"></i>
+                    </a>
+                <?}?>
             </div>
             <div class="w-full md:w-2/6 mb-2 text-center flex flex-col justify-center lg:text-left lg:justify-start lg:w-auto px-2">
-                <a href="tel:++ 74956680359" class="w-full text-black hover:text-mlgreen font-bold text-lg pf-font-medium no-underline">+ 7 (495) 668-03-59</a>
-                <p class="w-full pf-font-light text-black text-lg">Работаем с 8:00 до 23:00</p>
+                <a href="<?=$options['phone']->uri()?>" class="w-full text-black hover:text-mlgreen font-bold text-lg pf-font-medium no-underline"><?=$options['phone']->international()?></a>
+                <p class="w-full pf-font-light text-black text-lg"><?=$options['schedule']?></p>
             </div>
             <div class="w-full md:w-2/6 mb-2 text-center flex flex-col justify-center lg:text-left lg:justify-start lg:w-auto px-2">
-                <a href="mailto:infometall@gmail.com" class="w-full text-black-900 hover:text-mlgreen text-lg pf-font-light underline dotted">infometall@gmail.com</a>
-                <p class="w-full pf-font-light text-black text-lg">г.Москва, Каширное шоссе, 67с2</p>
+                <a href="mailto:<?=$options['email']?>" class="w-full text-black-900 hover:text-mlgreen text-lg pf-font-light underline dotted"><?=$options['email']?></a>
+                <p class="w-full pf-font-light text-black text-lg"><?=$options['address']?></p>
             </div>
             <div class="w-auto md:w-2/6 mb-2 text-center items-center flex flex-row justify-center lg:text-left lg:justify-start lg:w-auto">
-                <a href="#" class="w-full flex justify-center text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                    <div class="h-8 w-8 flex justify-center items-center rounded-full border-2 border-mlgreen shadow-mlgreen">
-                        <i class="fab fa-instagram-square"></i>
-                    </div>
-                </a>
-                <a href="#" class="w-full flex justify-center text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
-                    <div class="h-8 w-8 flex justify-center items-center rounded-full border-2 border-mlgreen shadow-mlgreen">
-                        <i class="fab fa-vk"></i>
-                    </div>
-                </a>
+                <?foreach ($options['social'] as $social){?>
+                    <a href="<?=$social['link']?>" class="w-full flex justify-center text-mlgreen text-xl text-lg pf-font-medium no-underline px-2">
+                        <div class="h-8 w-8 flex justify-center items-center rounded-full border-2 border-mlgreen shadow-mlgreen">
+                            <i class="<?=$social['icon']?>"></i>
+                        </div>
+                    </a>
+                <?}?>
             </div>
             <div class="w-full md:w-2/6 mb-2 text-center flex flex-row justify-center lg:text-left lg:justify-start lg:w-auto">
                 <button class="modal-open h-16 bg-mblue text-white hover:bg-blue-500 shadow-blue px-5 py-2">
