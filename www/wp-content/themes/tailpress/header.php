@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
 <!--Modal-->
 <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
     <div class="modal-overlay absolute w-full h-full bg-black opacity-75"></div>
@@ -65,7 +64,7 @@
                     </label>
                 </div>
                 <div class="flex justify-center mt-4">
-                    <button type="submit" class="mx-auto bg-mblue text-lg pf-font-medium text-white hover:bg-blue-600 shadow-blue px-9 py-3">Отправить</button>
+                    <button type="submit" class="mx-auto bg-mblue text-lg pf-font-medium text-white hover:bg-blue-500 shadow-blue px-9 py-3">Отправить</button>
                 </div>
             </form>
         </div>
@@ -80,7 +79,7 @@
         <nav id="site-menu" class="w-full justify-center items-center px-4 sm:px-6 py-1 lg:py-0 bg-white">
             <div class="w-full lg:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
                 <a href="/" class="flex lg:hidden start-c no-underline py-1 flex flex-row items-center text-lg sm:text-3xl">
-                    <img src="<?=get_template_directory_uri()?>/images/icon.png" alt="Logo" width="88" height="48">
+                    <img src="<?=get_template_directory_uri()?>/images/icon.png" class="lazy-off" alt="Logo" width="88" height="48">
                     <span class="hidden lg:block"><span class="text-mblue ">ЕТАЛ</span>ЛОЛОМ</span></a>
                 <button id="menuBtn" class="hamburger block lg:hidden focus:outline-none" type="button" onclick="navToggle();">
                     <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
@@ -106,7 +105,7 @@
         <div class="flex flex-row justify-center lg:justify-between flex-wrap w-full">
             <div class="w-full md:w-2/6 mb-2 flex justify-center lg:justify-start xl:w-2/6">
                 <a href="/" class="flex start-c no-underline py-1 flex flex-row items-center text-lg md:text-2xl">
-                    <img src="<?=get_template_directory_uri()?>/images/icon.png" alt="Logo" width="88" height="48">
+                    <img src="<?=get_template_directory_uri()?>/images/icon.png" class="lazy-off" alt="Logo" width="88" height="48">
                     <span class="text-mblue ">ЕТАЛ</span>ЛОЛОМ</a>
             </div>
             <div class="w-auto md:w-2/6 mb-2 text-center flex flex-row md:items-center lg:items-start justify-center lg:text-left lg:justify-start lg:w-auto">
@@ -138,7 +137,7 @@
                 </a>
             </div>
             <div class="w-full md:w-2/6 mb-2 text-center flex flex-row justify-center lg:text-left lg:justify-start lg:w-auto">
-                <button class="modal-open bg-mblue text-white hover:bg-blue-600 shadow-blue px-5 py-2">
+                <button class="modal-open bg-mblue text-white hover:bg-blue-500 shadow-blue px-5 py-2">
                     Обратный звонок
                 </button>
             </div>
