@@ -6,7 +6,7 @@
         <!--   HEADER INFO     -->
         <div class="flex flex-row justify-center lg:justify-between flex-wrap w-full">
             <div class="w-full md:w-2/6 mb-2 flex justify-center lg:justify-start lg:w-auto">
-                <a href="/" class="flex start-c no-underline py-1 flex flex-row items-center text-lg md:text-2xl">
+                <a href="/" class="flex logo no-underline py-1 flex flex-row items-center text-lg md:text-2xl">
                     <img src="<?=get_template_directory_uri()?>/images/icon.png" alt="Logo" width="88" height="48">
                     <span class="text-mblue ">ЕТАЛ</span>ЛОЛОМ</a>
             </div>

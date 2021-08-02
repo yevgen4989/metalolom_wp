@@ -124,6 +124,21 @@ function tailpress_setup() {
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'editor-styles' );
 	add_editor_style();
+
+    acf_add_options_page(array(
+        'page_title' => 'Баннер на главной',
+        'menu_slug' => 'banner',
+        'menu_title' => 'Баннер на главной',
+        'capability' => 'edit_posts',
+        'position' => '',
+        'parent_slug' => '',
+        'icon_url' => '',
+        'redirect' => true,
+        'post_id' => 'banner',
+        'autoload' => true,
+        'update_button' => 'Обновить',
+        'updated_message' => 'Сохранено',
+    ));
 }
 
 function cw_post_type() {
